@@ -13,8 +13,13 @@
         
         <div id="app" class="container">
 
+            <ul>
+                <li v-for="(single, index) in todoList">
+                    {{ single.text }}
+                </li>
+            </ul>
         </div>
-        
+
         <script src="js/script.js"></script>    
     </body>
 </html>
