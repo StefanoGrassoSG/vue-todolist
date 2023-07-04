@@ -28,8 +28,14 @@ createApp({
         addTodo() {
             if(this.newTodo.text.trim() != '') {
                 this.todoList.push(this.newTodo);
-                this.newTodo = '';
+                this.newTodo = {
+                    
+                };
             }
+        },
+
+        removeTodo(index) {
+            this.todoList.splice(index, 1)
         }
     }
 }).mount('#app');
