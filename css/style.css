@@ -27,7 +27,8 @@ ul {
     list-style: none;
 }
 
-ul li {
+ul li,
+.notodo {
     font-size: 50px;
     display: flex;
     background-color: lightgrey;

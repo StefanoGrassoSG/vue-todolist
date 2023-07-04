@@ -4,6 +4,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            notodo: 'Bravo hai fatto tutto!',
             newTodo: {
                     text: '',
                     done: false
@@ -29,7 +30,7 @@ createApp({
             if(this.newTodo.text.trim() != '') {
                 this.todoList.push(this.newTodo);
                 this.newTodo = {
-                    
+
                 };
             }
         },

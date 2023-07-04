@@ -20,13 +20,16 @@
             </form>
            
 
-            <ul>
+            <ul v-if="todoList.length > 0">
                 <li v-for="(single, i) in todoList">
                     {{ single.text }}
 
                     <span @click="removeTodo(i)">X</span>
                 </li>
             </ul>
+            <div class="notodo" v-else>
+                {{ notodo }}
+            </div>
         </div>
 
         <script src="js/script.js"></script>    
