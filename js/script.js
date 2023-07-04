@@ -4,6 +4,10 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            newTodo: {
+                    text: '',
+                    done: false
+                },
             todoList: [
                 {
                     text: 'mangiare',
@@ -18,6 +22,14 @@ createApp({
                     done: false
                 }
             ]
+        }
+    },
+    methods: {
+        addTodo() {
+            if(this.newTodo.text.trim() != '') {
+                this.todoList.push(this.newTodo);
+                this.newTodo = '';
+            }
         }
     }
 }).mount('#app');

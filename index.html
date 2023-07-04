@@ -12,6 +12,13 @@
     <body>
         
         <div id="app" class="container">
+            <form action=""  @submit.prevent="addTodo()">
+                <input required type="text" v-model="newTodo.text" placeholder="inserisci un nuovo to do">
+                <button>
+                    Aggiungi
+                </button>
+            </form>
+           
 
             <ul>
                 <li v-for="(single, index) in todoList">
