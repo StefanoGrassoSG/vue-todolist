@@ -40,3 +40,7 @@ ul li,
 ul li span {
     cursor: pointer;
 }
+
+.done {
+    text-decoration: line-through;
+}

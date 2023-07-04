@@ -22,7 +22,7 @@
 
             <ul v-if="todoList.length > 0">
                 <li v-for="(single, i) in todoList">
-                    {{ single.text }}
+                    <span :class="{ 'done': single.done }" @click="done(i)">{{ single.text }}</span>
 
                     <span @click="removeTodo(i)">X</span>
                 </li>
